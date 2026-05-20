@@ -4,6 +4,7 @@ import Icon from "@/components/ui/icon";
 const CAKE_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/files/4452e2b8-ac9c-46a7-8852-e12bca5b0a83.jpg";
 const BABY_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/files/c86e4388-14c9-42b3-b995-677a0147d5a6.jpg";
 const SURFER_CAKE_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/bucket/0f26868f-b49d-4f41-8b7c-2e7832e5cbfb.jpeg";
+const LILAC_CAKE_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/bucket/faa2c2c0-e9da-4823-8848-9247fb394b82.jpeg";
 
 function useScrollReveal() {
   useEffect(() => {
@@ -57,7 +58,7 @@ const galleryItems = [
   { label: "Торт Сёрфер", emoji: "", img: SURFER_CAKE_IMG, color: "hsl(350 40% 96%)" },
   { label: "День рождения", emoji: "🎉", color: "hsl(25 60% 95%)" },
   { label: "Детское пюре", emoji: "🥕", color: "hsl(160 30% 94%)" },
-  { label: "Торт-цветок", emoji: "🌸", color: "hsl(350 45% 95%)" },
+  { label: "Бэнто — сирень", emoji: "", img: LILAC_CAKE_IMG, color: "hsl(270 30% 95%)" },
   { label: "Бэнто-торт", emoji: "🍰", color: "hsl(40 50% 94%)" },
   { label: "Мясное пюре", emoji: "🍖", color: "hsl(25 40% 94%)" },
 ];
