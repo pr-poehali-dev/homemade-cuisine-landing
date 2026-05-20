@@ -70,6 +70,14 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				float: {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-12px)' },
+				},
+				fadeInUp: {
+					from: { opacity: '0', transform: 'translateY(30px)' },
+					to: { opacity: '1', transform: 'translateY(0)' },
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -89,8 +97,15 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 4s ease-in-out infinite',
+				'fade-in-up': 'fadeInUp 0.7s ease forwards',
+			},
+			fontFamily: {
+				display: ['Cormorant', 'serif'],
+				body: ['Golos Text', 'sans-serif'],
+				handwrite: ['Caveat', 'cursive'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
