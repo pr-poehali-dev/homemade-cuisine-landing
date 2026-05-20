@@ -5,6 +5,7 @@ const CAKE_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f27
 const BABY_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/files/c86e4388-14c9-42b3-b995-677a0147d5a6.jpg";
 const SURFER_CAKE_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/bucket/0f26868f-b49d-4f41-8b7c-2e7832e5cbfb.jpeg";
 const LILAC_CAKE_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/bucket/faa2c2c0-e9da-4823-8848-9247fb394b82.jpeg";
+const FROZEN_FOOD_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/bucket/018be9a1-242f-4f9b-9124-3155d13705a6.jpeg";
 
 function useScrollReveal() {
   useEffect(() => {
@@ -57,7 +58,7 @@ const reviews = [
 const galleryItems = [
   { label: "Торт Сёрфер", emoji: "", img: SURFER_CAKE_IMG, color: "hsl(350 40% 96%)" },
   { label: "День рождения", emoji: "🎉", color: "hsl(25 60% 95%)" },
-  { label: "Детское пюре", emoji: "🥕", color: "hsl(160 30% 94%)" },
+  { label: "Замороженное питание", emoji: "", img: FROZEN_FOOD_IMG, color: "hsl(160 30% 94%)" },
   { label: "Бэнто — сирень", emoji: "", img: LILAC_CAKE_IMG, color: "hsl(270 30% 95%)" },
   { label: "Бэнто-торт", emoji: "🍰", color: "hsl(40 50% 94%)" },
   { label: "Мясное пюре", emoji: "🍖", color: "hsl(25 40% 94%)" },
@@ -282,14 +283,20 @@ export default function Index() {
               </div>
             ))}
           </div>
-          <div className="fade-in-up mt-12 rounded-3xl p-8 text-center"
+          <div className="fade-in-up mt-12 rounded-3xl overflow-hidden grid md:grid-cols-2"
             style={{ background: "linear-gradient(135deg, hsl(160 30% 88%), hsl(160 25% 92%))" }}>
-            <div className="font-display text-2xl md:text-3xl font-light mb-3" style={{ color: "hsl(160 30% 28%)" }}>
-              ❄️ Удобная заморозка
+            <div className="p-8 flex flex-col justify-center">
+              <div className="font-display text-2xl md:text-3xl font-light mb-3" style={{ color: "hsl(160 30% 28%)" }}>
+                ❄️ Удобная заморозка
+              </div>
+              <p className="font-body text-sm leading-relaxed" style={{ color: "hsl(160 20% 40%)" }}>
+                Готовые блюда быстро замораживаем и доставляем. Сделайте запас на неделю — и не думайте о готовке каждый день. Все витамины и вкус сохраняются полностью.
+              </p>
             </div>
-            <p className="font-body text-sm max-w-xl mx-auto" style={{ color: "hsl(160 20% 40%)" }}>
-              Готовые блюда быстро замораживаем и доставляем. Сделайте запас на неделю — и не думайте о готовке каждый день. Все витамины и вкус сохраняются полностью.
-            </p>
+            <div className="min-h-[220px]">
+              <img src={FROZEN_FOOD_IMG} alt="Замороженное детское питание"
+                className="w-full h-full object-cover" style={{ minHeight: 220 }} />
+            </div>
           </div>
           <div className="text-center mt-8 fade-in-up">
             <a href="#contact" className="btn-primary"
