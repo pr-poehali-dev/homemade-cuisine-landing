@@ -142,7 +142,7 @@ export default function Index() {
               <a href="#baby" className="btn-outline">Детское питание</a>
             </div>
             <div className="flex gap-8 mt-10">
-              {[["200+", "тортов"], ["5 лет", "опыта"], ["100%", "натурально"]].map(([num, txt]) => (
+              {[["200+", "тортов"], ["10 лет", "опыта"], ["100%", "натурально"]].map(([num, txt]) => (
                 <div key={txt}>
                   <div className="font-display text-2xl font-semibold" style={{ color: "hsl(340 40% 58%)" }}>{num}</div>
                   <div className="font-body text-xs" style={{ color: "hsl(340 10% 55%)" }}>{txt}</div>
@@ -199,10 +199,10 @@ export default function Index() {
             <h2 className="font-display text-4xl md:text-5xl font-light leading-snug mb-5"
               style={{ color: "hsl(340 20% 22%)" }}>
               Готовлю с любовью<br />
-              <em className="italic" style={{ color: "hsl(340 40% 60%)" }}>уже 5 лет</em>
+              <em className="italic" style={{ color: "hsl(340 40% 60%)" }}>уже 10 лет</em>
             </h2>
             <p className="font-body text-base leading-relaxed mb-4" style={{ color: "hsl(340 10% 45%)" }}>
-              Меня зовут [Ваше имя], я кулинар и мама. Всё началось с желания кормить своего ребёнка только чистым и натуральным — без химии, без консервантов, с любовью.
+              Меня зовут Анастасия, я кулинар и мама. Всё началось с желания кормить своего ребёнка только чистым и натуральным — без химии, без консервантов, с любовью.
             </p>
             <p className="font-body text-base leading-relaxed mb-6" style={{ color: "hsl(340 10% 45%)" }}>
               Сегодня я создаю торты на заказ для ваших самых важных событий и готовлю детское питание для маленьких гурманов. Домашнее производство — значит контроль каждого ингредиента.
