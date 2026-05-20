@@ -3,6 +3,7 @@ import Icon from "@/components/ui/icon";
 
 const CAKE_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/files/4452e2b8-ac9c-46a7-8852-e12bca5b0a83.jpg";
 const BABY_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/files/c86e4388-14c9-42b3-b995-677a0147d5a6.jpg";
+const SURFER_CAKE_IMG = "https://cdn.poehali.dev/projects/c05a0cc1-3b23-4ba6-9de5-c7f272141c4a/bucket/0f26868f-b49d-4f41-8b7c-2e7832e5cbfb.jpeg";
 
 function useScrollReveal() {
   useEffect(() => {
@@ -53,7 +54,7 @@ const reviews = [
 ];
 
 const galleryItems = [
-  { label: "Свадебный торт", emoji: "🎂", color: "hsl(350 40% 96%)" },
+  { label: "Торт Сёрфер", emoji: "", img: SURFER_CAKE_IMG, color: "hsl(350 40% 96%)" },
   { label: "День рождения", emoji: "🎉", color: "hsl(25 60% 95%)" },
   { label: "Детское пюре", emoji: "🥕", color: "hsl(160 30% 94%)" },
   { label: "Торт-цветок", emoji: "🌸", color: "hsl(350 45% 95%)" },
@@ -178,7 +179,7 @@ export default function Index() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="fade-in-up">
             <div className="relative">
-              <img src={BABY_IMG} alt="Детское питание"
+              <img src={SURFER_CAKE_IMG} alt="Торт ручной работы — сёрфер"
                 className="rounded-3xl w-full object-cover shadow-xl"
                 style={{ maxHeight: 420 }} />
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-5 shadow-xl"
@@ -347,15 +348,27 @@ export default function Index() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {galleryItems.map((g, i) => (
-              <div key={i} className="fade-in-up card-hover rounded-3xl overflow-hidden flex flex-col items-center justify-center gap-3 min-h-[180px] p-6"
+              <div key={i} className="fade-in-up card-hover rounded-3xl overflow-hidden min-h-[180px]"
                 style={{ transitionDelay: `${i * 0.07}s`, background: g.color }}>
-                <div className="text-5xl">{g.emoji}</div>
-                <span className="font-handwrite text-base text-center" style={{ color: "hsl(340 20% 40%)" }}>
-                  {g.label}
-                </span>
-                <span className="font-body text-xs text-center" style={{ color: "hsl(340 10% 60%)" }}>
-                  фото скоро появятся
-                </span>
+                {"img" in g && g.img ? (
+                  <div className="relative w-full h-full min-h-[180px]">
+                    <img src={g.img} alt={g.label} className="w-full h-full object-cover" style={{ minHeight: 180 }} />
+                    <div className="absolute bottom-0 left-0 right-0 px-4 py-3"
+                      style={{ background: "linear-gradient(to top, hsla(340,20%,15%,0.6), transparent)" }}>
+                      <span className="font-handwrite text-base text-white">{g.label}</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex flex-col items-center justify-center gap-3 p-6 h-full min-h-[180px]">
+                    <div className="text-5xl">{g.emoji}</div>
+                    <span className="font-handwrite text-base text-center" style={{ color: "hsl(340 20% 40%)" }}>
+                      {g.label}
+                    </span>
+                    <span className="font-body text-xs text-center" style={{ color: "hsl(340 10% 60%)" }}>
+                      фото скоро появятся
+                    </span>
+                  </div>
+                )}
               </div>
             ))}
           </div>
