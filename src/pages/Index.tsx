@@ -83,7 +83,7 @@ export default function Index() {
         style={{ background: "hsla(40,50%,98%,0.9)", borderBottom: "1px solid hsl(30 20% 90%)" }}>
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
           <a href="#hero" className="font-display text-2xl font-semibold" style={{ color: "hsl(340 40% 55%)" }}>
-            Вкус любви
+            Асюша Кукинг
           </a>
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map((l) => (
@@ -473,7 +473,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="py-8 px-6 text-center" style={{ background: "hsl(340 15% 22%)" }}>
         <div className="font-display text-xl font-semibold mb-1" style={{ color: "hsl(340 40% 75%)" }}>
-          Вкус любви
+          Асюша Кукинг
         </div>
         <p className="font-body text-xs" style={{ color: "hsl(340 10% 55%)" }}>
           © 2026 · Домашняя кулинария · Торты и детское питание
